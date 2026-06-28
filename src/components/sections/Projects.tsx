@@ -16,7 +16,8 @@ const projectsData = [
       "Applied TCP/IP stack internals knowledge to handle fragmented/out-of-order packets.",
       "Implemented offline analysis via pcap trace files."
     ],
-    github: "https://github.com/souravvoid", // Generic link since specific repo might not be public or named differently
+    github: "https://github.com/souravvoid/packet-analyzer",
+    image: "/projects/packet-analyzer.png"
   },
   {
     title: "PeerLink — Secure P2P File Transfer",
@@ -29,7 +30,8 @@ const projectsData = [
       "Leveraged Java 21 Virtual Threads and a BlockingQueue pipeline to handle concurrent multi-file transfers.",
       "Decoupled encryption from I/O for throughput efficiency."
     ],
-    github: "https://github.com/souravvoid",
+    github: "https://github.com/souravvoid/peerlink",
+    image: "/projects/peerlink.png"
   },
   {
     title: "OptiPatrol — Crime Hotspot Prediction",
@@ -43,6 +45,7 @@ const projectsData = [
       "Significantly reduced per-request database round-trips on aggregated crime record queries."
     ],
     github: "https://github.com/souravvoid/Crime-Hotspot-Prediction-and-Patrol-Optimization-System",
+    image: "/projects/optipatrol.png"
   },
   {
     title: "AI Agent Assistant",
@@ -55,7 +58,8 @@ const projectsData = [
       "Implemented sliding-window memory for context preservation.",
       "Utilized embedding-based semantic retrieval for accurate information fetching."
     ],
-    github: "https://github.com/souravvoid",
+    github: "https://github.com/souravvoid/ai-agent-assistant",
+    image: "/projects/ai-agent.png"
   }
 ];
 
@@ -81,43 +85,56 @@ export function Projects() {
 function ProjectCard({ project }: { project: typeof projectsData[0] }) {
   return (
     <TerminalWindow title={project.title} date={project.date}>
-        <div>
-          <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-          <p className="text-[#8B949E] text-sm">{project.description}</p>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+          <div className="lg:col-span-3">
+            <div>
+              <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+              <p className="text-[#8B949E] text-sm">{project.description}</p>
+            </div>
 
-        <div className="flex flex-wrap gap-2 my-2">
-          {project.techStack.split(", ").map(tech => (
-            <span key={tech} className="px-2 py-1 bg-[#238636]/20 text-[#3FB950] text-xs rounded font-mono border border-[#238636]/30">
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-2 space-y-3">
-          <div>
-            <h4 className="text-sm font-semibold text-[#58A6FF] flex items-center gap-2 mb-1">
-              <Code2 className="w-4 h-4" /> Architecture
-            </h4>
-            <p className="text-sm text-[#C9D1D9]">{project.architecture}</p>
+            <div className="flex flex-wrap gap-2 my-4">
+              {project.techStack.split(", ").map(tech => (
+                <span key={tech} className="px-2 py-1 bg-[#238636]/20 text-[#3FB950] text-xs rounded font-mono border border-[#238636]/30">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            
+            <div className="mt-4 pt-4 border-t border-[#30363D] flex gap-4">
+              <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`View source for ${project.title}`} className="flex items-center gap-2 text-sm text-[#8B949E] hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
+                <Github className="w-4 h-4" /> View Source
+              </a>
+            </div>
           </div>
           
-          <div>
-            <h4 className="text-sm font-semibold text-[#58A6FF] flex items-center gap-2 mb-1">
-              <Code2 className="w-4 h-4" /> Engineering Decisions
-            </h4>
-            <ul className="list-disc list-inside text-sm text-[#C9D1D9] space-y-1">
-              {project.engineeringDecisions.map((decision, i) => (
-                <li key={i}>{decision}</li>
-              ))}
-            </ul>
+          <div className="lg:col-span-2 space-y-4">
+            {/* Image Placeholder */}
+            <div className="w-full h-32 bg-[#21262d] rounded-lg border border-[#30363D] flex items-center justify-center text-xs text-[#8B949E] overflow-hidden relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#21262d] to-[#161b22] opacity-50"></div>
+              <span className="relative z-10 flex flex-col items-center gap-2">
+                <Code2 className="w-6 h-6 opacity-50" />
+                Preview pending
+              </span>
+            </div>
+
+            <div>
+              <h4 className="text-sm font-semibold text-[#58A6FF] flex items-center gap-2 mb-1">
+                <Code2 className="w-4 h-4" /> Architecture
+              </h4>
+              <p className="text-xs text-[#C9D1D9] leading-relaxed">{project.architecture}</p>
+            </div>
           </div>
         </div>
 
-        <div className="mt-4 pt-4 border-t border-[#30363D] flex gap-4">
-          <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`View source for ${project.title}`} className="flex items-center gap-2 text-sm text-[#8B949E] hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
-            <Github className="w-4 h-4" /> View Source
-          </a>
+        <div className="mt-6 pt-4 border-t border-[#30363D]">
+          <h4 className="text-sm font-semibold text-[#58A6FF] flex items-center gap-2 mb-2">
+            <Code2 className="w-4 h-4" /> Engineering Decisions
+          </h4>
+          <ul className="list-disc list-inside text-sm text-[#C9D1D9] space-y-1.5">
+            {project.engineeringDecisions.map((decision, i) => (
+              <li key={i} className="leading-relaxed">{decision}</li>
+            ))}
+          </ul>
         </div>
     </TerminalWindow>
   );

@@ -17,7 +17,7 @@ export function About() {
           I am a Backend / Full Stack Software Engineer currently pursuing my B.Tech in Computer Science and Engineering at Graphic Era Hill University. I specialize in building robust, scalable systems and performant APIs.
         </p>
         <p>
-          My technical foundation is rooted in low-level networking, distributed systems, and clean architectural patterns. Whether I&apos;m capturing raw packets in C++ or optimizing database queries in Python, I am driven by a passion for understanding how systems work under the hood.
+          My technical foundation is rooted in low-level networking, distributed systems, and clean architectural patterns. Whether I&apos;m capturing raw packets in C++ or optimizing database queries in Python, I am driven by a passion for understanding how systems work under the hood. I am currently looking to join an early-stage startup where I can take immense ownership and ship high-impact products.
         </p>
       </section>
 
