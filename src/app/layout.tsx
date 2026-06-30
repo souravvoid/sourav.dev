@@ -17,17 +17,22 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sourav-portfolio.vercel.app"),
   title: "Sourav | Backend Software Engineer",
   description: "Portfolio of Sourav, a Backend/Full Stack Engineer specializing in Python, C++, and scalable systems.",
+  alternates: {
+    canonical: "https://sourav-portfolio.vercel.app",
+  },
   openGraph: {
     title: "Sourav | Backend Software Engineer",
     description: "Portfolio of Sourav, a Backend/Full Stack Engineer specializing in Python, C++, and scalable systems.",
     type: "website",
-    url: "https://sourav-portfolio.vercel.app", 
+    url: "https://sourav-portfolio.vercel.app",
+    images: [{ url: "/avatar.png", width: 512, height: 512, alt: "Sourav — Backend Software Engineer" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sourav | Backend Software Engineer",
     description: "Portfolio of Sourav, a Backend/Full Stack Engineer specializing in Python, C++, and scalable systems.",
-  }
+    images: ["/avatar.png"],
+  },
 };
 
 export default function RootLayout({

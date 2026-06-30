@@ -16,8 +16,7 @@ const projectsData = [
       "Applied TCP/IP stack internals knowledge to handle fragmented/out-of-order packets.",
       "Implemented offline analysis via pcap trace files."
     ],
-    github: "https://github.com/souravvoid/packet-analyzer",
-    image: "/projects/packet-analyzer.png"
+    github: "https://github.com/souravvoid/packet-analyzer"
   },
   {
     title: "PeerLink — Secure P2P File Transfer",
@@ -30,8 +29,7 @@ const projectsData = [
       "Leveraged Java 21 Virtual Threads and a BlockingQueue pipeline to handle concurrent multi-file transfers.",
       "Decoupled encryption from I/O for throughput efficiency."
     ],
-    github: "https://github.com/souravvoid/peerlink",
-    image: "/projects/peerlink.png"
+    github: "https://github.com/souravvoid/peerlink"
   },
   {
     title: "OptiPatrol — Crime Hotspot Prediction",
@@ -44,8 +42,7 @@ const projectsData = [
       "Resolved N+1 query anti-patterns in SQLAlchemy ORM using eager loading strategies.",
       "Significantly reduced per-request database round-trips on aggregated crime record queries."
     ],
-    github: "https://github.com/souravvoid/Crime-Hotspot-Prediction-and-Patrol-Optimization-System",
-    image: "/projects/optipatrol.png"
+    github: "https://github.com/souravvoid/Crime-Hotspot-Prediction-and-Patrol-Optimization-System"
   },
   {
     title: "AI Agent Assistant",
@@ -58,8 +55,7 @@ const projectsData = [
       "Implemented sliding-window memory for context preservation.",
       "Utilized embedding-based semantic retrieval for accurate information fetching."
     ],
-    github: "https://github.com/souravvoid/ai-agent-assistant",
-    image: "/projects/ai-agent.png"
+    github: "https://github.com/souravvoid/ai-agent-assistant"
   }
 ];
 

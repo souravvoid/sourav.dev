@@ -12,7 +12,6 @@ export async function submitContactForm(
 ): Promise<ContactFormState> {
   const name = formData.get("name") as string;
   const email = formData.get("email") as string;
-  const subject = formData.get("subject") as string;
   const message = formData.get("message") as string;
 
   // Basic Server-Side Validation
@@ -34,18 +33,17 @@ export async function submitContactForm(
     await new Promise((resolve) => setTimeout(resolve, 1500));
     
     // In a real application, you would use an email API here. Example:
+    // const subject = formData.get("subject") as string;
     // await resend.emails.send({
     //   from: 'Portfolio <onboarding@resend.dev>',
     //   to: 'your-email@example.com',
     //   subject: subject || 'New Contact Form Submission',
     //   text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
     // });
-    
-    console.log("Contact Form Submitted:", { name, email, subject, message });
 
-    return { 
-      success: true, 
-      message: "Thank you for reaching out! Your message has been sent successfully." 
+    return {
+      success: true,
+      message: "Thank you for reaching out! Your message has been sent successfully."
     };
   } catch (error) {
     console.error("Failed to send message:", error);
