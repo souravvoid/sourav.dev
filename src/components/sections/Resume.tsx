@@ -2,12 +2,12 @@
 
 import { BookOpen, Code, Database, Cpu, Lock, Wrench, Layers } from "lucide-react";
 
-export function Resume() {
+export function Education and Skills() {
   return (
     <article className="animate-in fade-in slide-in-from-bottom-4 duration-700">
       <header className="mb-8">
         <h2 className="text-3xl font-bold tracking-tight inline-flex items-center gap-3">
-          Resume
+          Education and Skills
           <div className="h-1 w-24 bg-primary rounded-full ml-2"></div>
         </h2>
       </header>
