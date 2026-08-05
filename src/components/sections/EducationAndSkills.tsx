@@ -2,7 +2,7 @@
 
 import { BookOpen, Code, Database, Cpu, Lock, Wrench, Layers } from "lucide-react";
 
-export function Education and Skills() {
+export function EducationAndSkills() {
   return (
     <article className="animate-in fade-in slide-in-from-bottom-4 duration-700">
       <header className="mb-8">
@@ -21,9 +21,9 @@ export function Education and Skills() {
             </div>
             <h3 className="text-2xl font-semibold">Education</h3>
           </div>
-          
+
           <div className="relative pl-6 border-l border-border/50 space-y-8">
-            <TimelineItem 
+            <TimelineItem
               title="Graphic Era Hill University (GEHU)"
               date="2024 — 2028"
               subtitle="B.Tech in Computer Science and Engineering"
@@ -41,35 +41,35 @@ export function Education and Skills() {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <SkillCategory 
-            title="Languages" 
-            icon={Code} 
-            skills={["C++", "Java", "Python", "SQL", "Bash"]} 
+          <SkillCategory
+            title="Languages"
+            icon={Code}
+            skills={["C++", "Java", "Python", "SQL", "Bash"]}
           />
-          <SkillCategory 
-            title="Systems & Low-Level" 
-            icon={Cpu} 
-            skills={["Linux (Fedora)", "Raw sockets", "libpcap", "POSIX APIs", "TCP/IP internals"]} 
+          <SkillCategory
+            title="Systems & Low-Level"
+            icon={Cpu}
+            skills={["Linux (Fedora)", "Raw sockets", "libpcap", "POSIX APIs", "TCP/IP internals"]}
           />
-          <SkillCategory 
-            title="Backend & Databases" 
-            icon={Database} 
-            skills={["FastAPI", "REST APIs", "SQLAlchemy", "PostgreSQL", "MySQL", "SQLite"]} 
+          <SkillCategory
+            title="Backend & Databases"
+            icon={Database}
+            skills={["FastAPI", "REST APIs", "SQLAlchemy", "PostgreSQL", "MySQL", "SQLite"]}
           />
-          <SkillCategory 
-            title="Cryptography & Security" 
-            icon={Lock} 
-            skills={["AES-256-GCM", "ECDH", "End-to-end encryption", "JWT"]} 
+          <SkillCategory
+            title="Cryptography & Security"
+            icon={Lock}
+            skills={["AES-256-GCM", "ECDH", "End-to-end encryption", "JWT"]}
           />
-          <SkillCategory 
-            title="AI / ML" 
-            icon={Cpu} 
-            skills={["LLMs", "RAG", "Prompt engineering", "AI Agents", "NumPy", "Pandas"]} 
+          <SkillCategory
+            title="AI / ML"
+            icon={Cpu}
+            skills={["LLMs", "RAG", "Prompt engineering", "AI Agents", "NumPy", "Pandas"]}
           />
-          <SkillCategory 
-            title="Tools & Environment" 
-            icon={Wrench} 
-            skills={["Git", "Docker", "VS Code", "Maven", "GDB", "Valgrind"]} 
+          <SkillCategory
+            title="Tools & Environment"
+            icon={Wrench}
+            skills={["Git", "Docker", "VS Code", "Maven", "GDB", "Valgrind"]}
           />
         </div>
       </section>
