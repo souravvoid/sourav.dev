@@ -1,6 +1,6 @@
 # Sourav — Portfolio
 
-A terminal-themed personal portfolio built with **Next.js 16**, **React 19**, **Tailwind CSS v4**, and **Framer Motion**. Live at [souravvoid.dev](https://souravvoid.dev) (if deployed).
+A terminal-themed personal portfolio built with **Next.js 16**, **React 19**, **Tailwind CSS v4**, and **Framer Motion**. Live at [souravvoid.dev](https://sourav-dev.vercel.app/?tab=About) (if deployed).
 
 ## Stack
 
@@ -50,4 +50,4 @@ public/           # Static assets (avatar, resume.pdf)
 
 ## License
 
-MIT — originally forked from `codewithsadee 2022`.
+MIT
