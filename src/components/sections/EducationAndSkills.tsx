@@ -27,7 +27,7 @@ export function EducationAndSkills() {
               title="Graphic Era Hill University (GEHU)"
               date="2024 — 2028"
               subtitle="B.Tech in Computer Science and Engineering"
-              description="CGPA: 7.5 / 10.0"
+             
             />
           </div>
         </section>
