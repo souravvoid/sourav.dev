@@ -77,7 +77,7 @@ export function EducationAndSkills() {
   );
 }
 
-function TimelineItem({ title, date, subtitle, description }: { title: string, date: string, subtitle: string, description: string }) {
+function TimelineItem({ title, date, subtitle, description }: { title: string, date: string, subtitle: string, description?: string }) {
   return (
     <div className="relative">
       <div className="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-primary/20 border-2 border-primary" />
