@@ -1,14 +1,13 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from "next";
+import { site } from "@/content/portfolio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sourav-portfolio.vercel.app'; // Update this to your real domain
-
   return [
     {
-      url: baseUrl,
+      url: site.url,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 1,
-    }
+    },
   ];
 }

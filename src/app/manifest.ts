@@ -1,19 +1,21 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from "next";
+import { site } from "@/content/portfolio";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Sourav - Backend Software Engineer Portfolio',
-    short_name: 'Sourav Portfolio',
-    description: 'Portfolio of Sourav, a Backend/Full Stack Engineer specializing in Python, C++, and scalable systems.',
-    start_url: '/',
-    display: 'standalone',
-    background_color: '#0d1117',
-    theme_color: '#0d1117',
+    name: `${site.name} — ${site.role}`,
+    short_name: site.name,
+    description: site.description,
+    start_url: "/",
+    display: "standalone",
+    background_color: "#0a0a0a",
+    theme_color: "#0a0a0a",
     icons: [
       {
-        src: '/favicon.ico',
-        sizes: 'any',
-        type: 'image/x-icon',
+        src: "/icon.svg",
+        sizes: "any",
+        type: "image/svg+xml",
+        purpose: "any",
       },
     ],
   };
