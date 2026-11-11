@@ -14,7 +14,7 @@ export const site = {
   timeZone: "Asia/Kolkata",
   availability: "Open to backend & systems roles",
   /** TODO: replace with your real email address. */
-  email: "your-email@example.com",
+  email: "souravsemwal1@gmail.com",
   /** TODO: optional. Leave empty to keep it off the website. */
   phone: "",
   github: "https://github.com/souravvoid",

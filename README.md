@@ -53,7 +53,7 @@ These are placeholders on purpose. Do not deploy with them unchanged.
 
 | Field | Where | Notes |
 | --- | --- | --- |
-| Email | `site.email` | Currently `your-email@example.com`. Replace before deploying. |
+| Email | `site.email` | Currently `souravsemwal1@gmail.com`. Update if it changes. |
 | Phone | `site.phone` | Empty by default and stays hidden. Add only if you want it public. |
 | Full name | `site.fullName` | Currently “Sourav”. Used in structured data. |
 | Canonical URL | `site.url` | Currently the old Vercel URL. Point it at your real domain. |

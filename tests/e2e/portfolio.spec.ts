@@ -146,7 +146,7 @@ test("copy email action writes the address to the clipboard", async ({ page, con
 
   await expect(dialog.getByRole("option", { name: "Email copied" })).toBeVisible();
   const clipboard = await page.evaluate(() => navigator.clipboard.readText());
-  expect(clipboard).toBe("your-email@example.com");
+  expect(clipboard).toBe("souravsemwal1@gmail.com");
 });
 
 test("theme toggle switches between dark and light and persists", async ({ page }) => {
