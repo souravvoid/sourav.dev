@@ -56,9 +56,11 @@ function openExternal(url: string) {
 }
 
 function downloadResume() {
+  if (!site.resume) return;
+
   const link = document.createElement("a");
   link.href = site.resume;
-  link.download = "Sourav-Resume.pdf";
+  link.download = "Sourav-CV.pdf";
   document.body.appendChild(link);
   link.click();
   link.remove();
@@ -158,15 +160,19 @@ export function CommandMenu() {
         icon: copied ? Check : Copy,
         run: copyEmail,
       },
-      {
-        id: "download-resume",
-        group: "actions",
-        label: "Download résumé",
-        hint: "PDF",
-        keywords: "cv pdf file",
-        icon: Download,
-        run: downloadResume,
-      },
+      ...(site.resume
+        ? [
+            {
+              id: "download-resume",
+              group: "actions",
+              label: "Download résumé",
+              hint: "PDF",
+              keywords: "cv pdf file",
+              icon: Download,
+              run: downloadResume,
+            } satisfies Command,
+          ]
+        : []),
       {
         id: "toggle-theme",
         group: "actions",

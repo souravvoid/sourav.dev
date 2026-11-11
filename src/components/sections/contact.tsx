@@ -66,20 +66,22 @@ export function ContactSection() {
             </span>
           </a>
 
-          <a
-            href={site.resume}
-            download
-            className="group flex items-center justify-between gap-2 p-4 text-[13px] text-foreground/80 transition-colors hover:bg-surface-hover hover:text-foreground"
-          >
-            <span className="flex items-center gap-2.5">
-              <Download className="size-4 text-muted" aria-hidden="true" />
-              Résumé
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="label-mono hidden sm:block">PDF</span>
-              <ArrowUpRight className="size-3.5 text-muted" aria-hidden="true" />
-            </span>
-          </a>
+          {site.resume ? (
+            <a
+              href={site.resume}
+              download
+              className="group flex items-center justify-between gap-2 p-4 text-[13px] text-foreground/80 transition-colors hover:bg-surface-hover hover:text-foreground"
+            >
+              <span className="flex items-center gap-2.5">
+                <Download className="size-4 text-muted" aria-hidden="true" />
+                Résumé
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="label-mono hidden sm:block">PDF</span>
+                <ArrowUpRight className="size-3.5 text-muted" aria-hidden="true" />
+              </span>
+            </a>
+          ) : null}
         </div>
 
         {showPhone ? (

@@ -71,14 +71,16 @@ export function Hero() {
       </div>
 
       <div className="hero-enter mt-7 flex flex-wrap items-center gap-2" data-delay="4">
-        <a
-          href={site.resume}
-          download
-          className="inline-flex h-9 items-center gap-2 rounded-full bg-foreground px-4 text-[12.5px] font-medium text-background transition-opacity hover:opacity-85"
-        >
-          <ArrowDown className="size-3.5" aria-hidden="true" />
-          Résumé
-        </a>
+        {site.resume ? (
+          <a
+            href={site.resume}
+            download
+            className="inline-flex h-9 items-center gap-2 rounded-full bg-foreground px-4 text-[12.5px] font-medium text-background transition-opacity hover:opacity-85"
+          >
+            <ArrowDown className="size-3.5" aria-hidden="true" />
+            Résumé
+          </a>
+        ) : null}
 
         <a
           href={`mailto:${site.email}`}

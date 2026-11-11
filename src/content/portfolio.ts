@@ -20,7 +20,8 @@ export const site = {
   github: "https://github.com/souravvoid",
   linkedin: "https://www.linkedin.com/in/sourav-873471302/",
   githubHandle: "@souravvoid",
-  resume: "/resume.pdf",
+  /** Replace public/cv.pdf with your latest CV, or set to null to hide the links. */
+  resume: "/cv.pdf" as string | null,
   url: "https://sourav-portfolio.vercel.app",
   description:
     "Sourav is a backend and systems engineer from Uttarakhand, India. He builds APIs, networking tools and data systems in Python, C++ and Java.",

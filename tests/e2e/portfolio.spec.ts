@@ -99,11 +99,16 @@ test("project, social, and résumé links are present and valid", async ({ page 
     hero.locator('a[href="https://www.linkedin.com/in/sourav-873471302/"]').first(),
   ).toBeVisible();
 
-  const resume = page.locator('a[download][href="/resume.pdf"]').first();
-  await expect(resume).toBeVisible();
-  const response = await page.request.get("/resume.pdf");
-  expect(response.status()).toBe(200);
-  expect(response.headers()["content-type"]).toContain("application/pdf");
+  // The résumé links are hidden when site.resume is null, so check both states.
+  const resumeLinks = page.locator('a[download][href="/cv.pdf"]');
+  const resumeResponse = await page.request.get("/cv.pdf");
+
+  if (resumeResponse.status() === 200) {
+    expect(resumeResponse.headers()["content-type"]).toContain("application/pdf");
+    await expect(resumeLinks.first()).toBeVisible();
+  } else {
+    await expect(resumeLinks).toHaveCount(0);
+  }
 });
 
 test("command palette opens, filters, navigates, and closes", async ({ page }) => {

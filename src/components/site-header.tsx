@@ -130,13 +130,15 @@ export function SiteHeader() {
               </a>
             </div>
 
-            <a
-              href={site.resume}
-              download
-              className="rounded-full bg-foreground px-3.5 py-2 text-[12px] font-medium text-background"
-            >
-              résumé ↓
-            </a>
+            {site.resume ? (
+              <a
+                href={site.resume}
+                download
+                className="rounded-full bg-foreground px-3.5 py-2 text-[12px] font-medium text-background"
+              >
+                résumé ↓
+              </a>
+            ) : null}
           </div>
         </div>
       ) : null}

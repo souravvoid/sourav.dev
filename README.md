@@ -57,7 +57,7 @@ These are placeholders on purpose. Do not deploy with them unchanged.
 | Phone | `site.phone` | Empty by default and stays hidden. Add only if you want it public. |
 | Full name | `site.fullName` | Currently “Sourav”. Used in structured data. |
 | Canonical URL | `site.url` | Currently the old Vercel URL. Point it at your real domain. |
-| Résumé | `public/resume.pdf` | Replace with the current PDF. |
+| Résumé | `public/cv.pdf` | Replace with your latest CV. Set `site.resume` to `null` to hide the links. |
 | Avatar | `public/avatar.png` | Square image, 256×256 is enough for the 64 px hero avatar. |
 | Hackathon details | `hackathon` | Confirm the event name/status/copy for GitKitty. |
 | Awards / internships | `timeline`, `highlights` | Add real entries only. Nothing was invented. |
@@ -84,7 +84,7 @@ src/
   components/          header, hero, sections, command menu, UI primitives
   content/portfolio.ts all editable content
   lib/                 cn() helper + command-menu event helper
-public/                avatar + résumé
+public/                avatar + CV
 ```
 
 ## Accessibility & performance notes
