@@ -41,7 +41,6 @@ export function NowSection() {
             <div className="flex items-end justify-between gap-4">
               <p className="font-mono text-[13px] text-foreground/80 sm:text-[14px]">
                 <span className="text-[var(--glow)]">$</span> git checkout{" "}
-                <span className="font-medium">hackathon</span>
                 <span className="animate-pulse text-[var(--glow)]">_</span>
               </p>
               <ArrowUpRight
