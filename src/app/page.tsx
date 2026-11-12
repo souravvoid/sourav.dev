@@ -1,6 +1,6 @@
-import { BackToTop } from "@/components/back-to-top";
 import { CommandMenu } from "@/components/command-menu";
 import { Hero } from "@/components/hero";
+import { HomeMascot } from "@/components/mascot/HomeMascot";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { AboutSection } from "@/components/sections/about";
@@ -30,7 +30,7 @@ export default function Home() {
 
       <SiteFooter />
       <CommandMenu />
-      <BackToTop />
+      <HomeMascot />
     </div>
   );
 }
